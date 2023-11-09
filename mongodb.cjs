@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-mongoose.connect('mongodb+srv://root:root@cluster0.l4pvpm7.mongodb.net/loginDetails',{useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGOdb_URL,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>
 {
     console.log("connected Successfully");
